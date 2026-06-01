@@ -8,7 +8,7 @@ import compression from 'compression';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import morgan from 'morgan';
-import router from './routes.js';
+import router from '../src/routes.js';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -55,15 +55,36 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).json({ error: err.message || 'Internal Server Error' });
 });
 
+let cached = global.mongoose;
+
+if (!cached) {
+  cached = global.mongoose = { conn: null };
+}
+
+async function connectDB() {
+  if (cached.conn) return cached.conn;
+
+  cached.conn = await mongoose.connect(
+    process.env.MONGODB_URI
+  );
+
+  return cached.conn;
+}
+
+export default async function handler(req, res) {
+  await connectDB();
+  return app(req, res);
+}
+
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/text-summarizer')
-  .then(() => {
-    console.log('✅ MongoDB connected');
-    app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
-  })
-  .catch(err => {
-    console.error('❌ MongoDB connection failed:', err.message);
-    process.exit(1);
-  });
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/text-summarizer')
+//   .then(() => {
+//     console.log('✅ MongoDB connected');
+//     app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+//   })
+//   .catch(err => {
+//     console.error('❌ MongoDB connection failed:', err.message);
+//     process.exit(1);
+//   });
 
 export default app;
