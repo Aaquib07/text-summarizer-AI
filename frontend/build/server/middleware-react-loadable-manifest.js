@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST='{"index.js -> ../components/Features":{"id":9786,"files":["static/chunks/786.de871399ae064f56.js"]}}';

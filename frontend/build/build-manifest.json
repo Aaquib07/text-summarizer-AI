@@ -1,0 +1,101 @@
+{
+  "polyfillFiles": [
+    "static/chunks/polyfills-c67a75d1b6f99dc8.js"
+  ],
+  "devFiles": [],
+  "ampDevFiles": [],
+  "lowPriorityFiles": [
+    "static/Uzod6AryaUwW2aBPchIx1/_buildManifest.js",
+    "static/Uzod6AryaUwW2aBPchIx1/_ssgManifest.js"
+  ],
+  "rootMainFiles": [],
+  "pages": {
+    "/": [
+      "static/chunks/webpack-35ae11027d8542b3.js",
+      "static/chunks/framework-2c0fa632eea9ca9a.js",
+      "static/chunks/main-bac2f07e2c919777.js",
+      "static/chunks/319-2043853b59564945.js",
+      "static/chunks/66-2c8577e16c268308.js",
+      "static/chunks/223-3cddd12bac95502d.js",
+      "static/chunks/pages/index-b54fd501523ea57f.js"
+    ],
+    "/404": [
+      "static/chunks/webpack-35ae11027d8542b3.js",
+      "static/chunks/framework-2c0fa632eea9ca9a.js",
+      "static/chunks/main-bac2f07e2c919777.js",
+      "static/chunks/319-2043853b59564945.js",
+      "static/chunks/pages/404-daeab29b730abb37.js"
+    ],
+    "/_app": [
+      "static/chunks/webpack-35ae11027d8542b3.js",
+      "static/chunks/framework-2c0fa632eea9ca9a.js",
+      "static/chunks/main-bac2f07e2c919777.js",
+      "static/css/62567c4d0088e46c.css",
+      "static/chunks/pages/_app-47a8033acda66669.js"
+    ],
+    "/_error": [
+      "static/chunks/webpack-35ae11027d8542b3.js",
+      "static/chunks/framework-2c0fa632eea9ca9a.js",
+      "static/chunks/main-bac2f07e2c919777.js",
+      "static/chunks/pages/_error-ee5b5fb91d29d86f.js"
+    ],
+    "/analytics": [
+      "static/chunks/webpack-35ae11027d8542b3.js",
+      "static/chunks/framework-2c0fa632eea9ca9a.js",
+      "static/chunks/main-bac2f07e2c919777.js",
+      "static/chunks/319-2043853b59564945.js",
+      "static/chunks/66-2c8577e16c268308.js",
+      "static/chunks/pages/analytics-9634a3a4553ccd8a.js"
+    ],
+    "/blog": [
+      "static/chunks/webpack-35ae11027d8542b3.js",
+      "static/chunks/framework-2c0fa632eea9ca9a.js",
+      "static/chunks/main-bac2f07e2c919777.js",
+      "static/chunks/319-2043853b59564945.js",
+      "static/chunks/pages/blog-621f5106d4b28dbc.js"
+    ],
+    "/blog/best-ai-tools-summarizing-text": [
+      "static/chunks/webpack-35ae11027d8542b3.js",
+      "static/chunks/framework-2c0fa632eea9ca9a.js",
+      "static/chunks/main-bac2f07e2c919777.js",
+      "static/chunks/319-2043853b59564945.js",
+      "static/chunks/pages/blog/best-ai-tools-summarizing-text-55c918e64d68a988.js"
+    ],
+    "/blog/how-to-summarize-articles-quickly": [
+      "static/chunks/webpack-35ae11027d8542b3.js",
+      "static/chunks/framework-2c0fa632eea9ca9a.js",
+      "static/chunks/main-bac2f07e2c919777.js",
+      "static/chunks/319-2043853b59564945.js",
+      "static/chunks/pages/blog/how-to-summarize-articles-quickly-796804969500323b.js"
+    ],
+    "/blog/what-is-text-summarization": [
+      "static/chunks/webpack-35ae11027d8542b3.js",
+      "static/chunks/framework-2c0fa632eea9ca9a.js",
+      "static/chunks/main-bac2f07e2c919777.js",
+      "static/chunks/319-2043853b59564945.js",
+      "static/chunks/pages/blog/what-is-text-summarization-b43164b29de61409.js"
+    ],
+    "/history": [
+      "static/chunks/webpack-35ae11027d8542b3.js",
+      "static/chunks/framework-2c0fa632eea9ca9a.js",
+      "static/chunks/main-bac2f07e2c919777.js",
+      "static/chunks/319-2043853b59564945.js",
+      "static/chunks/66-2c8577e16c268308.js",
+      "static/chunks/223-3cddd12bac95502d.js",
+      "static/chunks/pages/history-9e7d4909e4c89aa3.js"
+    ],
+    "/robots.txt": [
+      "static/chunks/webpack-35ae11027d8542b3.js",
+      "static/chunks/framework-2c0fa632eea9ca9a.js",
+      "static/chunks/main-bac2f07e2c919777.js",
+      "static/chunks/pages/robots.txt-58458b81aa17ef93.js"
+    ],
+    "/sitemap.xml": [
+      "static/chunks/webpack-35ae11027d8542b3.js",
+      "static/chunks/framework-2c0fa632eea9ca9a.js",
+      "static/chunks/main-bac2f07e2c919777.js",
+      "static/chunks/pages/sitemap.xml-b691d0efafcdea88.js"
+    ]
+  },
+  "ampFirstPages": []
+}
