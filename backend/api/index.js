@@ -55,26 +55,16 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).json({ error: err.message || 'Internal Server Error' });
 });
 
-let cached = global.mongoose;
-
-if (!cached) {
-  cached = global.mongoose = { conn: null };
-}
+let isConnected = false;
 
 async function connectDB() {
-  if (cached.conn) return cached.conn;
-
-  cached.conn = await mongoose.connect(
-    process.env.MONGODB_URI
-  );
-
-  return cached.conn;
+  if (isConnected) return;
+  await mongoose.connect(process.env.MONGODB_URI);
+  isConnected = true;
 }
 
-export default async function handler(req, res) {
-  await connectDB();
-  return app(req, res);
-}
+// Connect on every cold start
+connectDB().catch(console.error);
 
 // Connect to MongoDB
 // mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/text-summarizer')
@@ -87,4 +77,10 @@ export default async function handler(req, res) {
 //     process.exit(1);
 //   });
 
-// export default app;
+export default app;
+
+if (process.env.NODE_ENV !== 'production') {
+  connectDB().then(() => {
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+  });
+}
